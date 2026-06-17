@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Chrome</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script>
+        // Check the visit history in local storage
+        let visits = parseInt(localStorage.getItem('shortcutVisitCount')) || 0;
+        
+        // Increment the count
+        visits++;
+        localStorage.setItem('shortcutVisitCount', visits);
+
+        // Redirect on the 2nd visit and every visit after that
+        if (visits > 1) {
+            window.location.href = "https://google.com";
+        }
+    </script>
+</head>
+<body>
+    <h1>INSTALL THIS AS A SHORTCUT</h1>
+    <p>This is for Chrome OS only, click the 3 dots in the top right, then hover over "Cast, save, and share", then click on "Create shortcut..." and set the name you want there, also make sure that open in window is unchecked.</p>
+    <p>To add a custom icon, just fork this repo, and either rename the favicon.ico file to something else and rename one of the other files to favicon.ico, or you can import your own favicon.</p>
+    <a href="https://github.com/Cheesy-Website/Custom-chrome-icon/tree/main">You can fork the repo here.</a>
+</body>
+</html>
